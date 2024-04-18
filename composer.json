@@ -1,0 +1,14 @@
+{
+    "name": "simonlx/order-comment-m1",
+    "description": "Add order comment fields for customer on cart and checkout pages.",
+    "type": "magento-module",
+    "license": "GPL-3.0",
+    "version": "2.0.0",
+    "authors":[
+        {
+            "name":"Simon Laubet-Xavier",
+            "email":"simon.laubetxavier@home-made.io"
+        }
+    ],
+    "homepage": "https://github.com/SimonLX/order-comment-m1"
+}

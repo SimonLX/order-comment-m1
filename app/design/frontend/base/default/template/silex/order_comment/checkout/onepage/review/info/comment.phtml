@@ -1,0 +1,39 @@
+<?php
+/**
+ * @var Silex_OrderComment_Block_Onepage_Comment $this
+ *
+ * @see skin/frontend/base/default/js/opcheckout.js:900
+ */
+?>
+<form action="" id="co-comment-form">
+    <div style="padding-top: 20px">
+        <ul class="form-list">
+            <li class="wide">
+                <label for="customer-comment"><?php echo $this->__('Add a comment') ?></label>
+                <textarea id="customer-comment" name="customer-comment" cols="40" rows="4"><?php echo $this->getCommentText() ?></textarea>
+            </li>
+        </ul>
+    </div>
+</form>
+<script type="text/javascript">
+    Review.prototype.save = function () {
+        if (checkout.loadWaiting != false) return;
+        checkout.setLoadWaiting('review');
+        var params = Form.serialize(payment.form);
+        if (this.agreementsForm) {
+            params += '&' + Form.serialize(this.agreementsForm);
+        }
+        params += '&' + Form.serialize($('co-comment-form'));
+        params.save = true;
+        var request = new Ajax.Request(
+            this.saveUrl,
+            {
+                method: 'post',
+                parameters: params,
+                onComplete: this.onComplete,
+                onSuccess: this.onSave,
+                onFailure: checkout.ajaxFailure.bind(checkout)
+            }
+        );
+    }
+</script>

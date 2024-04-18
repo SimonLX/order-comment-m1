@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout>
+    <checkout_cart_index>
+        <reference name="checkout.cart">
+            <action method="setCartTemplate"><value>silex/order_comment/checkout/cart.phtml</value></action>
+            <action method="chooseTemplate"/>
+            <block type="silex_ordercomment/cart_comment" name="checkout.cart.comment" as="comment" template="silex/order_comment/checkout/cart/comment.phtml"/>
+        </reference>
+    </checkout_cart_index>
+    <checkout_onepage_review>
+        <reference name="checkout.onepage.review.info.items.after">
+            <block type="silex_ordercomment/onepage_comment" name="checkout.onepage.review.comment" as="comment" template="silex/order_comment/checkout/onepage/review/info/comment.phtml"/>
+        </reference>
+    </checkout_onepage_review>
+</layout>

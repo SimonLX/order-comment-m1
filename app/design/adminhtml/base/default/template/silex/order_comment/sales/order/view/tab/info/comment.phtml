@@ -1,0 +1,23 @@
+<?php
+/** @var Mage_Adminhtml_Block_Sales_Order_View_Tab_Info $this */
+?>
+<?php
+/** @var Silex_OrderComment_Model_Order_Comment $comment */
+$comment = Mage::getModel('silex_ordercomment/order_comment');
+$comment->loadByOrderId($this->getOrder()->getId());
+?>
+<?php if ($comment->getId()) : ?>
+    <div class="clear"></div>
+    <div class="box-left">
+        <div class="entry-edit">
+            <div class="entry-edit-head">
+                <h4 class="icon-head head-shipping-method">
+                    <?php echo $this->helper('silex_ordercomment')->__('Customer comment') ?>
+                </h4>
+            </div>
+            <fieldset>
+                <?php echo $comment->getComment() ?>
+            </fieldset>
+        </div>
+    </div>
+<?php endif ?>

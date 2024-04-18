@@ -1,0 +1,8 @@
+app/code/community/Silex/OrderComment/                           app/code/community/Silex/OrderComment/
+app/design/adminhtml/base/default/layout/silex/order_comment.xml app/design/adminhtml/base/default/layout/silex/order_comment.xml
+app/design/adminhtml/base/default/template/silex/order_comment/  app/design/adminhtml/base/default/template/silex/order_comment/
+app/design/frontend/base/default/layout/silex/order_comment.xml  app/design/frontend/base/default/layout/silex/order_comment.xml
+app/design/frontend/base/default/template/silex/order_comment/   app/design/frontend/base/default/template/silex/order_comment/
+app/etc/modules/Silex_OrderComment.xml                           app/etc/modules/Silex_OrderComment.xml
+app/locale/en_US/Silex_OrderComment.csv                          app/locale/en_US/Silex_OrderComment.csv
+app/locale/fr_FR/Silex_OrderComment.csv                          app/locale/fr_FR/Silex_OrderComment.csv

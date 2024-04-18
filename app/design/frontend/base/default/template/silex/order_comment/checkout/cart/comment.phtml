@@ -1,0 +1,23 @@
+<?php
+/**
+ * @var Silex_OrderComment_Block_Cart_Comment $this
+ */
+?>
+<?php if ($this->isBlockDisplayed()) : ?>
+<form id="comment-form" action="<?php echo $this->getFormActionUrl() ?>" method="post">
+    <div class="comment">
+        <h2><?php echo $this->__('Add a comment') ?></h2>
+        <div class="comment-form-content">
+            <textarea id="customer-comment" name="customer-comment" rows="4"><?php echo $this->getCommentText() ?></textarea>
+            <?php if ($this->hasFieldComment()) : ?>
+            <div class="tooltip"><?php echo $this->getFieldComment() ?></div>
+            <?php endif ?>
+            <div class="buttons-set">
+                <button type="submit" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Save comment')) ?>" class="button" value="<?php echo Mage::helper('core')->quoteEscape($this->__('Save commentn')) ?>">
+                    <span><span><?php echo $this->__('Save comment') ?></span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+<?php endif ?>

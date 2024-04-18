@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_sales_order_view>
+        <reference name="order_tab_info">
+            <action method="setTemplate">
+                <template>silex/order_comment/sales/order/view/tab/info.phtml</template>
+            </action>
+            <block type="adminhtml/sales_order_view_info" name="order_comment" template="silex/order_comment/sales/order/view/tab/info/comment.phtml"/>
+        </reference>
+    </adminhtml_sales_order_view>
+</layout>
